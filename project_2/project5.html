@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Gilliam - My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="history.back()" style="margin: 20px; padding: 10px 20px; border-radius: 10px; background-color: #ccc; border: none; cursor: pointer;">
+        ← Back
+      </button>
+      
+    <section>
+        <h2>Jungle Scene Project</h2>
+        <p>
+            This project creates a vibrant jungle scene using Python’s Turtle graphics. 
+            I refactored the code to improve efficiency and reduce repetition by using helper functions for trees, parrots, rocks, and a winding river. 
+        </p>
+
+        <h3>Sample Code Snippet</h3>
+        <p>
+            The following code is a refactored function that allows for the easy creation of multiple parrots in the scene. 
+            The only requirements are filling in the designated coordinates.
+        </p>
+        <pre class="code-container">
+            <span class="keyword">def</span> <span class="function">draw_parrot</span>(t, body_x, body_y, head_x, head_y, beak_x, beak_y, 
+            eye_x, eye_y, color):
+            
+                <span class="function">jump_to</span>(t, body_x, body_y)
+                <span class="function">draw_circle</span>(t, <span class="number">20</span>, color)
+                <span class="function">jump_to</span>(t, head_x, head_y)
+                <span class="function">draw_circle</span>(t, <span class="number">15</span>, color)
+                <span class="function">jump_to</span>(t, beak_x, beak_y)
+                <span class="function">draw_triangle</span>(t, <span class="number">13</span>, <span class="string">"yellow"</span>)
+                <span class="function">jump_to</span>(t, eye_x, eye_y)
+                <span class="function">draw_circle</span>(t, <span class="number">7</span>, <span class="string">"white"</span>)
+                <span class="function">jump_to</span>(t, eye_x, eye_y)
+                <span class="function">draw_circle</span>(t, <span class="number">4</span>, <span class="string">"black"</span>)
+            </pre>
+
+        <h3>Final Jungle Scene</h3>
+        <img src="jungle.png" alt="Jungle Scene" class="project-image">
+        <p>
+            The scene combines tall and small trees with layered canopies, a winding river, colorful parrots perched around, and rocks scattered around the river.
+        </p>
+    </section>
+</body>
